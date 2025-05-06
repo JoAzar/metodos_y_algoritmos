@@ -19,7 +19,7 @@ En lugar de usar backtracking, este enfoque utiliza una **estrategia modular y c
 
 Una solución válida para el problema de las 8 reinas es:
 
-```python
+python
 solucion_8 = [1, 5, 8, 6, 3, 7, 2, 4]
 
 ## Complejidad
