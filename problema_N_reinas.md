@@ -21,3 +21,12 @@ Una solución válida para el problema de las 8 reinas es:
 
 ```python
 solucion_8 = [1, 5, 8, 6, 3, 7, 2, 4]
+
+## Complejidad
+
+- Tiempo: O(n), ya que se coloca una reina por fila en forma directa sin búsqueda.
+- Espacio: O(n²), por el almacenamiento del tablero completo.
+
+## Conclusión
+
+- Este método proporciona una solución rápida y escalable al problema de las N reinas para valores de N que sean múltiplos de 8, evitando completamente las técnicas de backtracking y haciendo uso de la estructura repetitiva del patrón base.
