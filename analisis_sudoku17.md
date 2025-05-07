@@ -39,6 +39,22 @@ Dado que dichas estructuras se repiten poco y producen soluciones similares, se 
 
 ---
 
+### Conclusión final
+
+Cuando analizamos tableros de Sudoku con configuraciones iniciales específicas, como por ej. los valores:
+
+[1, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8]
+
+
+podemos aplicar una reducción de **conjuntos entrelazados** para encontrar patrones ocultos en los resultados. Este proceso consiste en identificar subconjuntos que se repiten o que tienen similitudes estructurales, y mediante un análisis recursivo, podemos descubrir configuraciones que se comportan de forma similar en cuanto a su solución.
+
+Este enfoque permite reducir la cantidad de trabajo y confusión al centrarse en **estructuras raras pero consistentes**, que ofrecen un mismo resultado. Una vez encontrado el menor conjunto posible a partir de estos conjuntos entrelazados, se revela un **patrón subyacente**.
+
+Ese patrón puede verse como una **espiral repetitiva** o incluso como una **estructura fractal**, en la que, aunque los valores puedan colocarse en distintas filas y columnas, el resto de los valores del tablero resultante son siempre los mismos, simplemente **reordenados según ese patrón**. Este fenómeno convierte una rareza en una ventaja estratégica para la resolución, análisis o generación de sudokus únicos y consistentes.
+
+
+---
+
 
 
 By Favio Joel Zalazar
