@@ -49,3 +49,41 @@ def generar_patron_n(n):
     return solucion
 
 #print(generar_patron_n(8))  # [2, 4, 1, 3, 6, 8, 5, 7]
+
+---
+
+## ✅ Validación
+
+Este patrón asegura:
+
+- ✅ Una reina por fila.  
+- ✅ Una reina por columna.  
+- ✅ No hay conflictos diagonales entre bloques si los desplazamientos son adecuados.
+
+---
+
+## 🧠 Propiedad Fractal
+
+El patrón se comporta como un **bloque auto-replicable**.  
+Al separarlos correctamente en el tablero, las interacciones quedan restringidas al interior del bloque, permitiendo **escalabilidad lineal**:
+
+- ⏱️ Tiempo: `O(n)`  
+- 💾 Espacio: `O(n)` o `O(n²)` si se representa el tablero completo.
+
+---
+
+## 📌 Limitaciones
+
+- 🔢 Funciona solo para valores de **N que son múltiplos de 4** (4, 8, 12, ...).
+- 🚫 No está diseñado para producir **todas las soluciones posibles**, sino solo **una válida**.
+- 🧩 No sustituye al **backtracking** si se desea **enumerar todas las configuraciones**.
+
+---
+
+## 🧪 Futuro
+
+Explorar:
+
+- 🔄 Ampliar el patrón a otros tamaños (6, 10, etc.).
+- 🧬 Combinar varios patrones en uno más complejo.
+- 🧠 Reducir problemas **NP** a esta estructura modular para experimentos sobre **P vs NP**.
