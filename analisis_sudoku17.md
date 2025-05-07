@@ -33,7 +33,5 @@ Este enfoque recursivo permite descubrir patrones subyacentes que de otro modo s
 
 Este fenómeno es clave para los desarrolladores que buscan generar o resolver sudokus automáticamente. El diseño de algoritmos eficientes para resolver sudokus no solo debe considerar cómo llenar las celdas basándose en las pistas, sino también cómo generar puzzles que tengan una solución única a partir de un número limitado de pistas.
 
-En este repositorio, hemos explorado algunas implementaciones que generan puzzles de Sudoku y que se aseguran de que las soluciones sean únicas, utilizando estos principios de las 17 pistas, configuraciones de valores iniciales limitados, y la reducción recursiva de conjuntos entrelazados para encontrar patrones escondidos. Si estás interesado en aprender más sobre la generación de sudokus o el análisis de sus soluciones, revisa los archivos y ejemplos en este repositorio.
-
 
 By Favio Joel Zalazar
