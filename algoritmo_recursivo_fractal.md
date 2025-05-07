@@ -19,6 +19,7 @@ Una solución válida para el tablero 4x4:
 
 ```python
 pattern_4 = [2, 4, 1, 3]
+```
 
 ---
 
@@ -49,6 +50,8 @@ def generar_patron_n(n):
     return solucion
 
 #print(generar_patron_n(8))  # [2, 4, 1, 3, 6, 8, 5, 7]
+
+```
 
 ---
 
@@ -87,3 +90,6 @@ Explorar:
 - 🔄 Ampliar el patrón a otros tamaños (6, 10, etc.).
 - 🧬 Combinar varios patrones en uno más complejo.
 - 🧠 Reducir problemas **NP** a esta estructura modular para experimentos sobre **P vs NP**.
+
+
+By Favio Joel Zalazar
