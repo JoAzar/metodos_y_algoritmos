@@ -29,9 +29,6 @@ Este fenómeno puede ser interpretado mediante una **reducción de conjuntos ent
 
 Este enfoque recursivo permite descubrir patrones subyacentes que de otro modo serían difíciles de ver a simple vista, ya que los conjuntos de valores iniciales pueden generar interacciones complejas que influyen en las soluciones finales. A través de la reducción de estos conjuntos entrelazados y el análisis de sus similitudes, se puede avanzar hacia una solución única, incluso en configuraciones que a simple vista parecerían más complejas.
 
-#### Importancia en el desarrollo de algoritmos
-
-Este fenómeno es clave para los desarrolladores que buscan generar o resolver sudokus automáticamente. El diseño de algoritmos eficientes para resolver sudokus no solo debe considerar cómo llenar las celdas basándose en las pistas, sino también cómo generar puzzles que tengan una solución única a partir de un número limitado de pistas.
 
 
 By Favio Joel Zalazar
