@@ -92,6 +92,53 @@ SAT_by_cube(variables)
 (True, {'x': True, 'y': False, 'z': False})
 ```
 
+###Enfoque con Heurística Geométrica
+
+##En esta variante, exploramos primero las combinaciones con más ceros (menos verdaderos), lo cual en la estructura del hipercubo equivale a comenzar desde un vértice más "cercano" al origen y expandir desde allí.
+
+```python
+from itertools import product
+
+# Define fórmula en CNF
+formula = [
+    ['~x', 'y', '~z'],
+    ['x', '~y', 'z'],
+    ['x', 'y', 'z'],
+    ['~x', '~y']
+]
+
+variables = ['x', 'y', 'z']
+
+def evaluate_literal(lit, assignment):
+    if lit.startswith('~'):
+        return not assignment[lit[1:]]
+    else:
+        return assignment[lit]
+
+def satisfies(assign):
+    return all(any(evaluate_literal(lit, assign) for lit in clause) for clause in formula)
+
+def score(node):
+    return node.count(0)
+
+nodes = sorted(list(product([0, 1], repeat=len(variables))), key=score, reverse=True)
+
+solution = None
+for node in nodes:
+    assignment = dict(zip(variables, [bool(v) for v in node]))
+    if satisfies(assignment):
+        solution = assignment
+        break
+
+solution
+
+#Resultado:
+
+{'x': False, 'y': False, 'z': True}
+```
+
+##Este enfoque demuestra que se puede priorizar regiones del espacio de búsqueda más prometedoras, lo cual reduce el tiempo para encontrar soluciones en muchos casos, sin recorrer todas las combinaciones posibles.
+
 ---
 
 ### Comparación con Algoritmo Convencional 3-SAT
@@ -105,6 +152,8 @@ SAT_by_cube(variables)
 | Visualización            | Lógica pura                        | Intuición geométrica                 |
 
 ---
+
+
 
 ### Conclusión
 
