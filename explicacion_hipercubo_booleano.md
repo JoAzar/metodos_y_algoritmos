@@ -92,9 +92,11 @@ SAT_by_cube(variables)
 (True, {'x': True, 'y': False, 'z': False})
 ```
 
-###Enfoque con Heurística Geométrica
+---
 
-##En esta variante, exploramos primero las combinaciones con más ceros (menos verdaderos), lo cual en la estructura del hipercubo equivale a comenzar desde un vértice más "cercano" al origen y expandir desde allí.
+### Enfoque con Heurística Geométrica
+
+En esta variante, exploramos primero las combinaciones con más ceros (menos verdaderos), lo cual en la estructura del hipercubo equivale a comenzar desde un vértice más "cercano" al origen y expandir desde allí.
 
 ```python
 from itertools import product
@@ -131,13 +133,15 @@ for node in nodes:
         break
 
 solution
+```
 
-#Resultado:
+#### Resultado:
 
+```python
 {'x': False, 'y': False, 'z': True}
 ```
 
-##Este enfoque demuestra que se puede priorizar regiones del espacio de búsqueda más prometedoras, lo cual reduce el tiempo para encontrar soluciones en muchos casos, sin recorrer todas las combinaciones posibles.
+Este enfoque demuestra que se puede priorizar regiones del espacio de búsqueda más prometedoras, lo cual reduce el tiempo para encontrar soluciones en muchos casos, sin recorrer todas las combinaciones posibles.
 
 ---
 
@@ -153,10 +157,10 @@ solution
 
 ---
 
-
-
 ### Conclusión
 
 El modelo del hipercubo booleano permite reinterpretar el problema SAT como una búsqueda en el espacio topológico de asignaciones. Aunque ambos enfoques tienen complejidad exponencial en el peor caso, este modelo ofrece una representación intuitiva que podría facilitar nuevas formas de poda, paralelización o aprendizaje automático.
+
+El uso de heurísticas geométricas o numéricas sobre esta estructura, como la priorización por cercanía al origen en el grafo del hipercubo, permite optimizar el recorrido del espacio de búsqueda sin necesidad de recorrer exhaustivamente todas las combinaciones.
 
 Este tipo de representación abre la puerta a una línea de investigación alternativa para resolver problemas de satisfacibilidad con una mirada más algorítmica-geométrica.
