@@ -165,4 +165,4 @@ El uso de heurísticas geométricas o numéricas sobre esta estructura, como la 
 
 Este tipo de representación abre la puerta a una línea de investigación alternativa para resolver problemas de satisfacibilidad con una mirada más algorítmica-geométrica.
 
-#By Favio Joel Zalazar
+By Favio Joel Zalazar
