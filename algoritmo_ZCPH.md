@@ -1,5 +1,3 @@
----
-
 # ZeroCostPathHint: Preprocesamiento Heurístico de Rutas con "Teletransportación Virtual"
 
 ## Descripción General
