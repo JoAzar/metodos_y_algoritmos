@@ -79,7 +79,7 @@ print("Valor final:", result_value)
 
 ---
 
-##Posibles aplicaciones
+## Posibles aplicaciones
 
 Predicción de rutas estratégicas.
 
