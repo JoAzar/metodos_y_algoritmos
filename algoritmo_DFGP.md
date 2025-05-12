@@ -75,6 +75,8 @@ result_value, result_path = g.find_best_path(mode="min")
 print("Mejor ruta (mínima):", result_path)
 print("Valor final:", result_value)
 
+```
+
 ---
 
 Posibles aplicaciones
