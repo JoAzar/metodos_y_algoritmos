@@ -36,9 +36,80 @@
 
 ---
 
-## Estado del proyecto
+## Implementación básica en Python
 
-> Actualmente en fase de diseño conceptual. Próximamente se implementará una versión en Python usando NetworkX u otra librería para visualización y pruebas.
+```python
+import networkx as nx
+import heapq
+
+def red_race_pathfinding(G, start_node):
+    def get_farthest_node(start):
+        visited = set()
+        queue = [(0, start)]
+        farthest = (0, start)
+        while queue:
+            dist, node = queue.pop(0)
+            if dist > farthest[0]:
+                farthest = (dist, node)
+            visited.add(node)
+            for neighbor in G.neighbors(node):
+                if neighbor not in visited:
+                    queue.append((dist + 1, neighbor))
+        return farthest[1]
+
+    def explore_neighbors(node, visited, cost_map, came_from, queue):
+        for neighbor in G.neighbors(node):
+            weight = G[node][neighbor].get('weight', 1)
+            new_cost = cost_map[node] + weight
+            if neighbor not in cost_map or new_cost < cost_map[neighbor]:
+                # Condición de carrera: "pisar" si llega mejor camino
+                cost_map[neighbor] = new_cost
+                came_from[neighbor] = node
+                heapq.heappush(queue, (new_cost, neighbor))
+
+    # Paso 1: obtener nodo más lejano desde el nodo inicial
+    far_node = get_farthest_node(start_node)
+
+    # Paso 2: estructuras base
+    visited = set()
+    cost_map = {start_node: 0, far_node: 0}
+    came_from = {}
+    queue = []
+    heapq.heappush(queue, (0, start_node))
+    heapq.heappush(queue, (0, far_node))
+
+    # Paso 3: recorrido bifocal con condiciones de carrera
+    while queue:
+        current_cost, current = heapq.heappop(queue)
+        if current in visited:
+            continue
+        visited.add(current)
+        explore_neighbors(current, visited, cost_map, came_from, queue)
+
+    return came_from, cost_map
+
+
+import networkx as nx
+G = nx.Graph()
+G.add_edge("A", "B", weight=4)
+G.add_edge("A", "C", weight=2)
+G.add_edge("B", "D", weight=5)
+G.add_edge("C", "D", weight=1)
+G.add_edge("D", "E", weight=3)
+
+came_from, cost_map = red_race_pathfinding(G, "A")
+
+# Mostrar el camino final desde A a E
+def reconstruct_path(came_from, end):
+    path = [end]
+    while end in came_from:
+        end = came_from[end]
+        path.append(end)
+    return path[::-1]
+
+print("Camino a E:", reconstruct_path(came_from, "E"))
+print("Costos:", cost_map)
+```
 
 ---
 
