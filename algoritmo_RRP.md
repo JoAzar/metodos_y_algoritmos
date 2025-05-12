@@ -113,6 +113,47 @@ print("Costos:", cost_map)
 
 ---
 
+## Complejidad y Comparación
+
+### **Análisis de complejidad**
+
+El algoritmo **Red Race Pathfinding (RRP)** tiene una complejidad aproximada de:
+
+1. **Búsqueda del nodo más lejano (BFS sin peso):**
+   - **Complejidad:** `O(V + E)`, donde `V` son los nodos y `E` las aristas.
+
+2. **Expansión bifocal con condiciones de carrera:**
+   - Al igual que **Dijkstra**, pero con dos focos de expansión y posibilidad de pisado.
+   - **Complejidad aproximada:** `O((V + E) * log V)` usando una cola de prioridad (`heapq`).
+
+### **Complejidad total:**
+
+**`O(V + E) + O((V + E) * log V)`  ≈  `O((V + E) * log V)`**
+
+---
+
+### **Comparación con otros algoritmos**
+
+| **Algoritmo**   | **Complejidad**               | **Observaciones**                          |
+|-----------------|-------------------------------|--------------------------------------------|
+| **Dijkstra**    | `O((V + E) * log V)`           | Búsqueda de ruta óptima desde un solo nodo |
+| **A***          | `O((V + E) * log V)`           | Similar a Dijkstra, pero con heurística    |
+| **Red Race (RRP)** | `O((V + E) * log V)`       | Bifocal y adaptativo, sin heurística, con pisadas dinámicas |
+
+---
+
+### **¿Y si hay muchas pisadas?**
+
+En el peor caso (si hay múltiples pisadas), la complejidad podría acercarse a:
+
+**`O(k * (V + E) * log V)`** donde `k` es el número de veces que se realizan pisadas o reconfiguraciones durante el proceso de búsqueda.
+
+---
+
+Este algoritmo tiene una complejidad similar a otros algoritmos de búsqueda de caminos en grafos, pero con la ventaja de adaptarse de manera reactiva a cambios, permitiendo exploración y optimización de rutas en paralelo desde múltiples puntos de origen.
+
+---
+
 ## Licencia
 
 > Este algoritmo fue ideado por Favio Joel Zalazar (Red). Si lo usás, mencioná la fuente o compartí tus mejoras con la comunidad.
