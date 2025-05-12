@@ -114,7 +114,7 @@ def rqp_fixed(graph, start, goal):
 Conclusión
 
 ZeroCostPathHint no intenta reemplazar a los algoritmos clásicos, sino que los complementa con una herramienta de análisis rápido, inspirada en una visión distinta: detectar nodos estratégicos y conexiones potenciales sin el costo de un recorrido detallado. Esta visión puede acelerar decisiones en entornos computacionales exigentes o inspirar nuevos métodos de pensamiento computacional.
-
+```
 
 ---
 
