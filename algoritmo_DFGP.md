@@ -74,3 +74,21 @@ result_value, result_path = g.find_best_path(mode="min")
 
 print("Mejor ruta (mínima):", result_path)
 print("Valor final:", result_value)
+
+---
+
+Posibles aplicaciones
+
+Predicción de rutas estratégicas.
+
+Modelos de decisiones evolutivas.
+
+IA basada en progresión de estado.
+
+Simulaciones sociales, biológicas o económicas.
+
+Juegos y sistemas de progreso personalizado.
+
+
+
+---
