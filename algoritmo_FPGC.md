@@ -50,3 +50,73 @@ Para cada carácter `C` en la clave original:
   ```text
   F1 = V XOR M
   F2 = M
+
+---
+
+## Construcción del Grafo
+
+Conectar los nodos con un patrón (puede ser aleatorio, circular, en estrella o por prioridad).
+
+Registrar el camino correcto de reconstrucción.
+
+
+## Encriptación
+
+El grafo completo actúa como el bloque cifrado. Cada nodo oculta una parte del mensaje dentro de un primo.
+
+## Desencriptación
+
+Para reconstruir la clave:
+
+Seguir el camino predefinido del grafo.
+
+En cada nodo:
+
+Extraer los fragmentos.
+
+Revertir la operación (por ejemplo, F1 XOR F2).
+
+
+Unir los caracteres reconstruidos.
+
+
+
+---
+
+# Ejemplo Simplificado
+
+Clave: R
+ASCII de R: 82
+Máscara aleatoria M: 7
+Fragmentos:
+
+F1 = 82 XOR 7 = 85  
+F2 = 7
+
+Asignación:
+
+Nodo A: Primo = 13, Valor = 85
+
+Nodo B: Primo = 17, Valor = 7
+
+
+Reconstrucción:
+
+85 XOR 7 = 82 → 'R'
+
+
+---
+
+## Seguridad y Ventajas
+
+Ofuscación distribuida: un atacante necesita el grafo entero y conocer el método de fragmentación para reconstruir.
+
+Primos aleatorios: agregan entropía y no repiten patrón.
+
+Grafo como llave secreta: incluso con todos los datos, sin el camino correcto no se puede reconstruir la clave.
+
+Modularidad: se pueden implementar versiones más fuertes con más capas de fragmentación.
+
+
+
+---
