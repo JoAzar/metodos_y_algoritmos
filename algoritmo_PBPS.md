@@ -171,6 +171,60 @@ public class PBPS {
 
 ---
 
+# Fuerza Bruta Pura
+
+En una matriz n x n, desde (0,0) hasta (n-1,n-1), puedes moverte en 4 direcciones (arriba, abajo, izquierda, derecha), pero en la práctica se restringe para evitar ciclos (yendo solo hacia la derecha y abajo, por ejemplo).
+
+Complejidad en el peor caso:
+Si explora todos los caminos posibles:
+O(4^(n²)) en el caso más general.
+Si se limita a derecha y abajo:
+O(2^(2n-2)), que sigue siendo exponencial.
+
+---
+
+# PBPS (Pattern-Balanced Path Search)
+
+En el mejor de los casos, si el patrón aparece temprano en el recorrido:
+
+La cola de prioridad dirige la búsqueda hacia ese patrón.
+
+No explora caminos redundantes que no siguen ese patrón.
+
+Podría encontrar el camino válido muy pronto, con una búsqueda dirigida tipo best-first.
+
+# Complejidad en el mejor de los casos
+
+Si encuentra un camino válido tras explorar solo una fracción pequeña del espacio de búsqueda, la complejidad no es exponencial en la práctica.
+
+Supongamos que encuentra el camino correcto tras visitar k nodos, donde k << n².
+
+Entonces:
+
+Mejor caso de PBPS:
+O(k log k) por el uso de la cola de prioridad (heap), donde k es la cantidad de nodos explorados hasta encontrar la solución.
+
+log k es el costo de mantener la cola ordenada.
+
+En un caso ideal: O(n) o O(n log n).
+
+
+# Resumen Comparativo (mejor caso)
+
+Algoritmo	Mejor caso (complejidad)
+
+```
+
+Fuerza Bruta	O(2^(2n-2))
+
+PBPS	O(n log n) (si hay patrón temprano)
+
+```
+
+Esto significa que PBPS puede ser cuasipolynomial o incluso lineal logarítmico en el mejor de los casos, lo cual es una mejora enorme frente a fuerza bruta.
+
+---
+
 Licencia
 
 MIT License - libre para usar, modificar y compartir.
