@@ -44,6 +44,8 @@ h(n): distancia Manhattan + |suma_actual|.
 
 armonía(n): puntaje basado en patrón de valores.
 
+```
+
 ---
 
 ## Algoritmo
