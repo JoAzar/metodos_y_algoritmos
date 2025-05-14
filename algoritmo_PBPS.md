@@ -1,5 +1,3 @@
----
-
 # Pattern-Balanced Path Search (PBPS)
 
 **PBPS** (Pattern-Balanced Path Search) es un algoritmo de búsqueda de caminos en matrices cuadradas que no solo busca llegar desde la posición inicial `(0,0)` hasta la final `(n-1,n-1)`, sino que también intenta encontrar un camino cuya **suma total de valores sea igual a `0`**.
