@@ -225,6 +225,20 @@ Esto significa que PBPS puede ser cuasipolynomial o incluso lineal logarítmico 
 
 ---
 
+# Comparación Aproximada de Nodos Explorados
+
+| Tamaño de Matriz | PBPS (Aprox. Nodos) | Fuerza Bruta (Aprox. Nodos) |
+|------------------|---------------------|------------------------------|
+| 6x6              | 36                  | 194                          |
+| 10x10            | 58                  | 984                          |
+| 20x20            | 142                 | 11.462                       |
+| 30x30            | 277                 | 25.839                       |
+| 50x50            | 698                 | 89.204                       |
+
+> **Nota**: Los valores son aproximados y varían ligeramente dependiendo de la configuración aleatoria de la matriz. Se utiliza una semilla fija para que la comparación sea coherente.
+
+---
+
 Licencia
 
 MIT License - libre para usar, modificar y compartir.
