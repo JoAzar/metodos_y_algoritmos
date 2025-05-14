@@ -146,9 +146,8 @@ public class PBPS {
             }
         }
         return score;
-    }
+    
 
-    // Ejemplo de uso
     public static void main(String[] args) {
         int[][] matriz = {
             {  0,  1,  0 },
@@ -171,18 +170,6 @@ public class PBPS {
 
 ```
 
-
----
-
-Ejemplo de matriz
-
-int[][] matriz = {
-    {  0,  1,  0 },
-    { -1,  0,  1 },
-    {  1, -1,  0 }
-};
-
-Este ejemplo contiene al menos un camino con suma total = 0
 
 ---
 
