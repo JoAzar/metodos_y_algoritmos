@@ -15,7 +15,7 @@ Esta estrategia puede usarse para:
 
 ## Fundamento Teórico
 
-Dado dos números enteros positivos $a$ y $b$, si $\gcd(a, b) = d$, entonces *$a = d \cdot a'$ y *$b = d \cdot b'$
+Dado dos números enteros positivos $a$ y $b$, si $\gcd(a, b) = d$, entonces $a = (d \cdot a') y $b = (d \cdot b')
 
 ### Multiplicación
 
