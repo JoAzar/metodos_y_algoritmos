@@ -5,7 +5,7 @@ El **algoritmo de Karatsuba** es un método de multiplicación rápida que reduc
 ### 📉 Complejidad
 
 - Multiplicación tradicional: \( O(n^2) \)
-- **Karatsuba**: \( O(n^{\log_2 3}) \approx O(n^{1.585}) \)
+- **Karatsuba**: \( O(n^{\log_2 3}) aprox O(n^{1.585}) \)
 
 Esto lo hace especialmente útil en sistemas que operan con grandes números enteros, como en criptografía o aritmética de precisión arbitraria.
 
