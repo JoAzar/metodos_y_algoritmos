@@ -1,3 +1,64 @@
+# Análisis: Evaluación lógica de un array de booleanos
+
+Supongamos que tenemos un array de valores booleanos (True = luz verde, False = luz roja) y queremos saber el resultado lógico global de aplicar una operación sobre ellos (como AND o OR)
+
+---
+
+Enfoque tradicional: recorrido completo
+
+Ejemplo: AND lógico
+
+```python
+
+def evaluar_and(array):
+    for val in array:
+        if not val:
+            return False
+    return True
+```
+
+### Complejidad
+
+Peor caso: O(n), si todos son True (debe recorrerlos todos)
+
+Mejor caso: O(1), si encuentra un False al principio
+
+---
+
+### Enfoque por inferencia lógica
+
+¿Qué pasa si ya sabemos que todos los valores son True?
+
+Podemos inferir el resultado sin recorrer
+
+```python
+def inferir_and(array, regla_conocida=False):
+    if regla_conocida:
+        return True  # sin recorrer el array
+    return evaluar_and(array)
+```
+
+
+### Complejidad
+
+Si regla_conocida = True:
+
+O(1) (constante) — no importa el tamaño del array
+
+Si no hay regla, cae al modo tradicional
+
+O(n) en el peor caso
+
+
+---
+
+### Ventaja práctica
+
+Cuando el array es enorme (millones de elementos), este cambio puede ahorrar muchísimo tiempo, especialmente si se aplica en entornos en tiempo real o sistemas críticos
+
+---
+
+
 ```python
 
 def evaluar_and(array):
