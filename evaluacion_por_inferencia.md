@@ -1,3 +1,5 @@
+```python
+
 def evaluar_and(array):
     for val in array:
         if not val:
@@ -36,3 +38,5 @@ print("AND tradicional:", evaluar_and(array))
 
 #Evaluación por inferencia (sin recorrer el array)
 print("AND inferido:", inferir_and(array, regla_conocida=True))
+
+```
