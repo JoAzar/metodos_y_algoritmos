@@ -67,13 +67,17 @@ En algoritmos como Kruskal sumado a Union Find el pack compression amortizada ca
 
 `Esto hace que Kruskal sea muy eficiente incluso en grafos grandes`
 
+---
+
 ## Resumiendo
 
 Imaginemos un árbol, porque es más práctico, bajo dos niveles |abuelo|padre|nieto e hijo| desde el nieto hasta el abuelo tengo un camino, ahora imaginense bajar al nieto del nieto del nieto, re largo
 
 ¿Entonces qué hacemos? Apuntamos al abuelo (suena re mal) y entonces estamos re cerquita
 
-### Explicación Chatgepetera
+---
+
+### Resumiento con explicación Chatgepetera (yo no lo entiendo así pero por ahí les sirve)
 
 - Cuando haces find(nieto), subes hasta la raíz (el abuelo)
 
@@ -81,3 +85,7 @@ Imaginemos un árbol, porque es más práctico, bajo dos niveles |abuelo|padre|n
 
 - Esto "aplana" el árbol, acortando el camino para futuras búsquedas
 
+
+```python
+  print("Creado por Favio Joel Zalazar")
+``
