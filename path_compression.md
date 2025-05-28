@@ -62,5 +62,8 @@ Esto se puede implementar típicamente de forma recursiva o iterativa
 - Mejora el tiempo promedio de operaciones de búsqueda
 
 - Permite que las estructuras jerárquicas se mantengan eficientes incluso después de muchas modificaciones
-  
+
+En algoritmos como Kruskal sumado a Union Find el pack compression amortizada cada operación union o find y se acerca a O(α(n)), donde α(n) es la inversa de la función de Ackermann, que crece tan lento que para todos los propósitos prácticos es casi constante
+
+`Esto hace que Kruskal sea muy eficiente incluso en grafos grandes`
 
