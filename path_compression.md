@@ -75,7 +75,9 @@ Imaginemos un árbol, porque es más práctico, bajo dos niveles |abuelo|padre|n
 
 ¿Entonces qué hacemos? Apuntamos al abuelo (suena re mal) y entonces estamos re cerquita
 
+
 ---
+
 
 ### Resumiento con explicación Chatgepetera (yo no lo entiendo así pero por ahí les sirve)
 
@@ -86,6 +88,7 @@ Imaginemos un árbol, porque es más práctico, bajo dos niveles |abuelo|padre|n
 - Esto "aplana" el árbol, acortando el camino para futuras búsquedas
 
 
+
 ```python
   print("Creado por Favio Joel Zalazar")
-``
+```
