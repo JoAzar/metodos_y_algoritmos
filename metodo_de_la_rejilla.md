@@ -1,9 +1,10 @@
 # Método de la rejilla
 
-## Una técnica simple pero eficaz para mantener relaciones de proximidad entre los puntos del plano consisten en contruir una rejilla imaginaria que divida la zona de búsqueda en pequeñas celdas y en mantener listas de pequeño tamaño de los puntos que están dentro de cada celda
+## Una técnica simple pero eficaz para mantener relaciones de proximidad entre los puntos del plano, consisten en contruir una rejilla imaginaria que divida la zona de búsqueda en pequeñas celdas y en mantener listas de pequeño tamaño de los puntos que están dentro de cada celda
 
 ### El método rejilla para la búsqueda por rango es lineal en el número de puntos del rango, por término medio, y lineal en el número total de puntos en el peor caso
 
+### Ejemplo en C++
 
 ```C++
 class Rango {
