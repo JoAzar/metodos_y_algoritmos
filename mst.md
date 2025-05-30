@@ -48,6 +48,6 @@ Un contra ejemplo de MST sería
 A-B (1)
 B-D (1)
 D-C (4)
-Costo total = 7
+Costo total = 6
 ```
 
