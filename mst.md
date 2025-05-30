@@ -46,8 +46,8 @@ Costo total = 5
 Un contra ejemplo de MST sería
 ```
 A-B (1)
-A-D (3)
-A-C (3)
+B-D (1)
+D-C (4)
 Costo total = 7
 ```
 
