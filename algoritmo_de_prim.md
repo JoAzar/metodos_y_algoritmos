@@ -63,6 +63,7 @@ Por ende también entender qué es un grafo, obviamente
 ### Depende de la implementación
 
 Con listas de adyacencia y cola de prioridad (heap): O(E log V)
+
 Con matriz de adyacencia (sin heap): O(V²)
 
 *Dejo un archivo en este mismo repo con la explicación de lo que es cola de prioridad y heap*
