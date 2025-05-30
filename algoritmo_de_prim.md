@@ -19,18 +19,20 @@ Por ende también entender qué es un grafo, obviamente
 
 ## Veamos un ejemplo
 
-*Dibujito nerd aparece*
+*Dibujito nerd aparece* (imaginenlo como árbol porque no me deja graficarlo y no tengo paint)
 
-   A
- / | \
-B--C--D
+   A -> B
+   A -> C
+   A -> D
+   B -> C
+   C -> D
 
 ### Con los pesos
 
-  | A-B: 1 |
-  | A-C: 3 |
-  | B-C: 1 |
-  | C-D: 4 |
+  A-B: 1
+  A-C: 3
+  B-C: 1
+  C-D: 4
 
 ### Aplicando Prim desde A
 
@@ -41,9 +43,9 @@ B--C--D
   Todos los vértices están incluidos, termina el algoritmo
 
 ### Árbol generado
-  | A-B (1) |
-  | B-C (1) |
-  | C-D (4) |
+  A-B (1)
+  B-C (1)
+  C-D (4)
   
   *Peso total: 6*
 
