@@ -33,13 +33,21 @@ De B a D -> COSTO: 1
 De C a D -> COSTO: 4
 ```
 
-Podríamos conectar todas las ciudades con caminos por un costo total mínimo. 
+### Podríamos conectar todas las ciudades con caminos por un costo total mínimo
 
 MST
 ```
 A-B (1)
 B-D (1)
 A-C (3)
-Total = 5
+Costo total = 5
+```
+
+Un contra ejemplo de MST sería
+```
+A-B (1)
+A-D (3)
+A-C (3)
+Costo total = 7
 ```
 
