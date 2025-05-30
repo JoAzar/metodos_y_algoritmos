@@ -30,7 +30,7 @@ De A a B -> COSTO: 1
 De A a D -> COSTO: 3
 De A a C -> COSTO: -
 De B a D -> COSTO: 1
-De D a C -> COSTO: 4
+De C a D -> COSTO: 4
 ```
 
 Podríamos conectar todas las ciudades con caminos por un costo total mínimo. 
