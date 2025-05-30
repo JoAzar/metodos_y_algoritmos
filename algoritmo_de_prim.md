@@ -21,9 +21,9 @@ Por ende también entender qué es un grafo, obviamente
 
 *Dibujito nerd aparece*
 
-     A
-   / | \
-  B--C--D
+   A
+ / | \
+B--C--D
 
 ### Con los pesos
 
