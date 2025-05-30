@@ -28,7 +28,7 @@ Supón que tienes 4 ciudades conectadas con caminos de diferentes costos
 ```
 De A a B -> COSTO: 1
 De A a D -> COSTO: 3
-De A a C -> COSTO: -
+De A a C -> COSTO: 3
 De B a D -> COSTO: 1
 De C a D -> COSTO: 4
 ```
