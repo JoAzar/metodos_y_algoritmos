@@ -22,16 +22,23 @@ Por ende también entender qué es un grafo, obviamente
 *Dibujito nerd aparece* (imaginenlo como árbol porque no me deja graficarlo y no tengo paint)
 
    A -> B
+   
    A -> C
+   
    A -> D
+   
    B -> C
+   
    C -> D
 
 ### Con los pesos
 
   A-B: 1
+  
   A-C: 3
+  
   B-C: 1
+  
   C-D: 4
 
 ### Aplicando Prim desde A
