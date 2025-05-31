@@ -63,4 +63,76 @@ def polar_sort_mejorado(lista, k=3):
 
 ---
 
+## Algoritmo PolarSort paso a paso
+
+Dada una lista de números desordenados
+
+```python
+lista = [10, 23, 5, 16, 42, 37, 8]
+```
+
+Supongamos que ya calculamos 3 polos equiespaciados (percentiles intermedios)
+
+polos = [10, 25, 40]
+
+
+## Paso 1: Inicialización de buckets
+
+Creamos un bucket vacío para cada polo
+
+```python
+buckets = {
+    10: [],
+    25: [],
+    40: []
+}
+```
+
+---
+
+## Paso 2: Asignar cada número a su polo más cercano
+
+Elemento x	Dist. a 10	Dist. a 25	Dist. a 40	Polo más cercano
+
+10	0	15	30	| 10 se agrupa en
+23	13	2	17	| 25 ""
+5	5	20	35	 | 10 ""
+16	6	9	24  | 10 ""
+42	32	17	2| 40 ""
+37	27	12	3|	40 ""
+8	2	17	32 	| 10 ""
+
+(perdón si se ve feo)
+
+Cada número se inserta en su bucket correspondiente manteniendo orden interno, usando bisect.insort
+
+---
+
+## Paso 3: Resultado de los buckets ordenados
+
+```python
+buckets = {
+    10: [5, 8, 10, 16],
+    25: [23],
+    40: [37, 42]
+}
+```
+
+---
+
+## Paso 4: Unir los buckets
+
+```python
+resultado_final = [5, 8, 10, 16] + [23] + [37, 42]
+# → [5, 8, 10, 16, 23, 37, 42]
+```
+
+---
+
+## ✅ Conclusión
+
+El algoritmo PolarSort agrupa los elementos por cercanía a polos distribuidos inteligentemente (percentiles) y ordena cada grupo con inserciones binarias. Esto permite formar una lista final ordenada de manera eficiente en ciertos contextos
+
+---
+
 Creado por Favio Joel Zalazar
