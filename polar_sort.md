@@ -92,7 +92,7 @@ buckets = {
 
 ## Paso 2: Asignar cada número a su polo más cercano
 
-distancia al polo más cercano, 10 | 25 | 40
+### distancia al polo más cercano
 
 valor | dist. 10 | dist. 25 | dist. 40 | group
 ---
