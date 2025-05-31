@@ -2,9 +2,7 @@
 
 ---
 
-### PolarSort es un algoritmo de ordenamiento inspirado en la noción de polos o núcleos de atracción
-
-### En esta versión mejorada, los polos se eligen automáticamente en función de la distribución de los datos, y cada elemento se inserta de manera ordenada en el bucket más cercano
+### PolarSort es un algoritmo de ordenamiento inspirado en la noción de polos o núcleos de atracción. Los polos se eligen automáticamente en función de la distribución de los datos, y cada elemento se inserta de manera ordenada en el bucket más cercano
 
 ### A diferencia de algoritmos clásicos como MergeSort o QuickSort, PolarSort no busca dividir recursivamente, sino agrupar inteligentemente elementos basándose en similitud numérica respecto a puntos centrales
 
