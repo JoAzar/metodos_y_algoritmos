@@ -95,18 +95,19 @@ buckets = {
 distancia al polo más cercano, 10 | 25 | 40
 
 valor | dist. 10 | dist. 25 | dist. 40 | group
+---
 10       	0	         15	         30	       10
-
+---
 23	       13	         2	        17	      25
-
+---
 5	         5	        20	        35        10
-
+---
 16        	6	        9	          24       10
- 
+---
 42       	32	        17         	2        40
-
+---
 37	       27	        12         	3        40
-
+---
 8	         2	        17         	32       10
 
 (perdón si se ve feo)
