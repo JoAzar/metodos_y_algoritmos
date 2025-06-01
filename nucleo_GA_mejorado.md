@@ -1,4 +1,15 @@
 # Núcleo de Algoritmo Genético Mejorado by Red
+(sin agregar las semillas)
+
+## Este núcleo
+
+- Aprende más rápido si se acerca a la meta
+
+- Evita atascarse
+
+- Recuerda lo mejor que ha logrado
+
+---
 
 ```python
 import random
@@ -59,7 +70,7 @@ def genetic_algorithm():
             child = mutate(child, mutation_rate)
             new_population.append(child)
 
-        # memoria: reinyectar mejor individuo si hay estancamiento
+        #Memoria: reinyectar mejor individuo si hay estancamiento
         if stagnation >= 20:
             new_population[random.randint(0, POP_SIZE-1)] = best_overall[:]
             stagnation = 0
