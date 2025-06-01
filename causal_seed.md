@@ -78,4 +78,40 @@ if name == "main": main()
 
 ---
 
+# 🧠 Algoritmo Genético Causal — Explicación
+
+Este experimento simula un sistema evolutivo con trazabilidad causal, donde las generaciones se desarrollan a partir de semillas iniciales. A diferencia de los algoritmos genéticos clásicos, este mantiene una relación de herencia explícita y reversible entre cada nodo e individuo
+
+## Componentes Clave
+
+Semilla (seed): cadena de texto que actúa como fuente de aleatoriedad. Representa el "ADN" inicial de un nodo
+
+Frase (frase): secuencia generada desde la semilla usando un vocabulario predeterminado. Equivale al fenotipo
+
+Fitness: se calcula en base a la presencia de pares de palabras complementarias. Cuanto más armónica la frase, mayor el fitness
+
+Nodo: objeto que encapsula una semilla, su frase, su fitness y un puntero causal (padre)
+
+Path Compression: técnica inspirada en algoritmos de conjuntos disjuntos. Optimiza la búsqueda del ancestro común de un nodo, permitiendo que cada frase evolutiva rastree su origen
+
+---
+
+## Flujo Evolutivo
+
+1. Se crean nodos iniciales con semillas base
+
+
+2. Cada generación muta frases anteriores creando nuevas semillas derivadas del hash de la frase
+
+
+3. Se evalúa el fitness de cada nueva frase
+
+
+4. Se establece una conexión causal con su nodo padre
+
+
+5. Se repite por N generaciones, manteniendo un historial completo
+
+---
+
 Creado por Favio Joel Zalazar
