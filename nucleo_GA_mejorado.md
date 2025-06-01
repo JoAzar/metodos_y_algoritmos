@@ -1,6 +1,9 @@
+# Núcleo de Algoritmo Genético Mejorado by Red
+
+```python
 import random
 
-# ========== CONFIGURACIÓN ==========
+#========== CONFIGURACIÓN ==========
 TARGET = "semilla que regresa desde el futuro"
 WORD_POOL = ["semilla", "regresa", "desde", "el", "futuro", "origen", "nodo", "abuelo", "nieto", "ley", "código", "gravedad"]
 POP_SIZE = 50
@@ -8,7 +11,7 @@ MAX_GENERATIONS = 500
 TOURNAMENT_SIZE = 5
 MUTATION_RATE_BASE = 0.4
 
-# ========== UTILIDADES ==========
+#========== UTILIDADES ==========
 def fitness(phrase):
     return sum(1 for a, b in zip(phrase, TARGET.split()) if a == b)
 
@@ -25,7 +28,7 @@ def tournament_selection(population, scores):
     tournament = random.sample(list(zip(population, scores)), TOURNAMENT_SIZE)
     return max(tournament, key=lambda x: x[1])[0]
 
-# ========== ALGORITMO ==========
+#========== ALGORITMO ==========
 def genetic_algorithm():
     population = [random_phrase() for _ in range(POP_SIZE)]
     best_overall = None
@@ -65,9 +68,14 @@ def genetic_algorithm():
 
     return best_overall, best_fitness, generation
 
-# ========== EJECUCIÓN ==========
+#========== EJECUCIÓN ==========
 if __name__ == "__main__":
     result, score, gen = genetic_algorithm()
     print(f"🔍 Resultado: {' '.join(result)}")
     print(f"🎯 Fitness: {score}/{len(TARGET.split())}")
     print(f"🧬 Generaciones: {gen}")
+```
+
+---
+
+Creado por Favio Joel Zalazar
