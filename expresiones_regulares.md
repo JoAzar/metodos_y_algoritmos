@@ -24,9 +24,7 @@ Una expresión regular es una cadena de texto que define un patrón para buscar 
 
 - `?` -> 0 o 1 repetición
 
-- - `*` -> 0 o más repeticiones
-
-- `+` -> 1 o más repeticiones
+- `*` -> 0 o más repeticiones
 
 - `{n}` -> exactamente n veces
 
