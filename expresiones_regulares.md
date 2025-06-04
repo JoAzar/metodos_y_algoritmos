@@ -74,6 +74,8 @@ Una expresión regular es una cadena de texto que define un patrón para buscar 
 
 - `(?:...)` -> agrupación sin captura
 
+- `\` ->  escapeo (no pertenece a este grupo)
+
 ---
 
 Creado por Favio Joel Zalazar
