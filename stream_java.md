@@ -1,4 +1,4 @@
-#Stream (Java)
+# Stream (Java)
 
 La interfaz Stream de Java, introducida en Java 8, sirve para procesar secuencias de datos de forma funcional y declarativa
 
